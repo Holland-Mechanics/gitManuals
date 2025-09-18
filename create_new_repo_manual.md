@@ -9,16 +9,19 @@ Create a new Git repository locally, add a README.md and push it to GitHub using
 
 ## Steps for webbrowser method
 
-1) Navigate to [github.com/holland-mechanics]() and log in.
+### 1 Navigate to [github.com/holland-mechanics]() 
+and log in.
 
-2) Create a repository by pressing the green Button label `New` and fill in a name and optionally also a description. 
+### 2 Create a repository 
+Create a repository by pressing the green Button label `New` and fill in a name and optionally also a description. 
 
 ![Image 1](src/gh1.png)
 
 Make sure the visibily box is set to `private`. Optionally you can choose to add a readme.md and .gitignore as well
 ![Image 2](src/gh2.png)
 
-3) As the webpage will also show, you need to run some command lines in a terminal to add, commit and push your files to the new repository. Or use an integrated git tool in your editor if you have it.
+### 3 Run some command lines
+As the webpage will also show, you need to run some command lines in a terminal to add, commit and push your files to the new repository. Or use an integrated git tool in your editor if you have it.
 
 First enter `git init` to make a local repo and add your files using `git add your_file.ext` or `git add *` to add each and every file in the folder and subfolder at once.
 
@@ -33,19 +36,22 @@ And lastly push using  `git push -u origin main`. Form this moment forward you c
 
 ## Steps for Command line tool method (gh.exe)
 
-1) Create folder and initialize repo
+### 1 Create folder and initialize repo
+run in terminal
    ```
    mkdir HelloWorld
    cd HelloWorld
    git init
    ```
 
-2) Optional: Create README.md with content
+### 2 Optional: Create README.md with content
+    run in terminal
    ```
    touch README.md
    ```
 
-3) Stage and commit
+### 3 Stage and commit
+    run in terminal
     
     You need to all your files to the repository.
 
@@ -62,9 +68,10 @@ And lastly push using  `git push -u origin main`. Form this moment forward you c
      git commit -am "added all files"
      ```
 
-4) Create repository on GitHub and push
+### 4 Create repository on GitHub and push
 
    Organization repository (holland-mechanics):
+   run in terminal
 
     ```
     gh repo create holland-mechanics/HelloWorld --private --source . --remote origin --push
@@ -94,16 +101,17 @@ And lastly push using  `git push -u origin main`. Form this moment forward you c
    - `--push`      : push the initial commit immediately
 
 
-5) Verify if your repo is visible on github.com
+### 5 Verify if your repo is visible on github.com
 
    - Organization: https://github.com/holland-mechanics/HelloWorld
 
 ## Steps for the python script.
 If the script is added to your system environment variables and python3 is installed. You can open a terminal and run the script from anywhere.
 
-1). In the project folder that you want to push to github, open a terminal and enter `create_new_repo_script.py`. This will launch the interactive script
+### 1 launch the script In the project folder that you want to push to github, open a terminal and enter `create_new_repo_script.py`. This will launch the interactive script
 
-2). Enter a suitable name and answer the questions. The script will ask per file if you want to add it to the repo. Once you are done, the script will push all added files to github.com/holland-mechanics
+### 2
+Enter a suitable name and answer the questions. The script will ask per file if you want to add it to the repo. Once you are done, the script will push all added files to github.com/holland-mechanics
 
 
 
@@ -124,3 +132,4 @@ If the script is added to your system environment variables and python3 is insta
   - Set it before first push:
     git branch -M main
     git push -u origin main
+
