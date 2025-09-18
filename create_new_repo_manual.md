@@ -1,13 +1,11 @@
 # Make a new git repository
 
 ## Goal
-Create a new Git repository locally, add a README.md and push it to GitHub using the webbrowser or the commandline tool `gh.exe`.
+Create a new Git repository locally, add a README.md and push it to GitHub using the webbrowser, the commandline tool `gh.exe` or via a pyhon script.
 
 ## Prerequisites
 - git installed and available in PATH
-- gh.exe installed (GitHub CLI) and authenticated:(OPTIONAL)
-  - For personal: gh auth login
-  - For work/org: either gh auth switch to your work account OR set GH_TOKEN to a work PAT
+- gh.exe installed (GitHub CLI) and authenticated (OPTIONAL)
 
 ## Steps for webbrowser method
 
@@ -99,6 +97,15 @@ And lastly push using  `git push -u origin main`. Form this moment forward you c
 5) Verify if your repo is visible on github.com
 
    - Organization: https://github.com/holland-mechanics/HelloWorld
+
+## Steps for the python script.
+If the script is added to your system environment variables and python3 is installed. You can open a terminal and run the script from anywhere.
+
+1). In the project folder that you want to push to github, open a terminal and enter `create_new_repo_script.py`. This will launch the interactive script
+
+2). Enter a suitable name and answer the questions. The script will ask per file if you want to add it to the repo. Once you are done, the script will push all added files to github.com/holland-mechanics
+
+
 
 ## Troubleshooting
 
