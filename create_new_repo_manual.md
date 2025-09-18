@@ -108,9 +108,10 @@ run in terminal
 ## Steps for the python script.
 If the script is added to your system environment variables and python3 is installed. You can open a terminal and run the script from anywhere.
 
-### 1 launch the script In the project folder that you want to push to github, open a terminal and enter `create_new_repo_script.py`. This will launch the interactive script
+### 1 Launche the script
+Launch the script In the project folder that you want to push to github, open a terminal and enter `create_new_repo_script.py`. This will launch the interactive script
 
-### 2
+### 2 follow the script
 Enter a suitable name and answer the questions. The script will ask per file if you want to add it to the repo. Once you are done, the script will push all added files to github.com/holland-mechanics
 
 
