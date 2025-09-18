@@ -1,15 +1,39 @@
 # Make a new git repository
 
 ## Goal
-Create a new Git repository locally, add a README.md with content "hello world", and publish it to GitHub (either personal or the organization holland-mechanics) using gh.exe.
+Create a new Git repository locally, add a README.md and push it to GitHub using the webbrowser or the commandline tool `gh.exe`.
 
 ## Prerequisites
 - git installed and available in PATH
-- gh.exe installed (GitHub CLI) and authenticated:
+- gh.exe installed (GitHub CLI) and authenticated:(OPTIONAL)
   - For personal: gh auth login
   - For work/org: either gh auth switch to your work account OR set GH_TOKEN to a work PAT
 
-## Steps
+## Steps for webbrowser method
+
+1) Navigate to [github.com/holland-mechanics]() and log in.
+
+2) Create a repository by pressing the green Button label `New` and fill in a name and optionally also a description. 
+
+![Image 1](src/gh1.png)
+
+Make sure the visibily box is set to `private`. Optionally you can choose to add a readme.md and .gitignore as well
+![Image 2](src/gh2.png)
+
+3) As the webpage will also show, you need to run some command lines in a terminal to add, commit and push your files to the new repository. Or use an integrated git tool in your editor if you have it.
+
+First enter `git init` to make a local repo and add your files using `git add your_file.ext` or `git add *` to add each and every file in the folder and subfolder at once.
+
+Commit all your files using `git commit -a` to the repository.
+
+Make a main or master branch: `git branch -M main`
+
+Add a remote with: `git remote add origin https://github.com/Holland-Mechanics/testABC.git`
+
+And lastly push using  `git push -u origin main`. Form this moment forward you can push by simply running `git push`
+![Image 3](src/gh3.png)
+
+## Steps for Command line tool method (gh.exe)
 
 1) Create folder and initialize repo
    ```
@@ -20,7 +44,7 @@ Create a new Git repository locally, add a README.md with content "hello world",
 
 2) Optional: Create README.md with content
    ```
-   echo hello world > README.md
+   touch README.md
    ```
 
 3) Stage and commit
@@ -30,7 +54,7 @@ Create a new Git repository locally, add a README.md with content "hello world",
    ```
    git add README.md
    git add file.cpp
-   git commit -m "Initial commit: add README"
+   git commit -m "Initial commit: added README.md"
    ```
    
     You can add all files at once using. Make sure you provide a gitignore or that you not add artifact files.
