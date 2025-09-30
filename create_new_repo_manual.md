@@ -24,26 +24,39 @@ Make sure the visibily box is set to `private`. Optionally you can choose to add
 As the webpage will also show, you need to run some command lines in a terminal to add, commit and push your files to the new repository. Or use an integrated git tool in your editor if you have it.
 
 First enter 
+
    ```git init``` 
+   
 to make a local repo and add your files using 
+
    ```git add your_file.ext``` 
+   
 or add each and every file in the folder and subfolder at once.
+
    ```git add *``` 
 
 Commit all your files using 
+
    ```git commit -a``` 
+   
 to the repository.
 
 Make a main or master branch: 
+
    ```git branch -M main```
 
 Add a remote with: 
+
    ```git remote add origin https://github.com/Holland-Mechanics/testABC.git```
 
 And lastly push using  
+
 ```git push -u origin main``` 
+
 Form this moment forward you can push by simply running 
+
 ```git push```
+
 ![Image 3](src/gh3.png)
 
 ## Steps for Command line tool method (gh.exe)
