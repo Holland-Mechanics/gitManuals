@@ -46,16 +46,16 @@ run in terminal
    ```
 
 ### 2 Optional: Create README.md with content
-    run in terminal
+run in terminal
     
    ```
    touch README.md
    ```
 
 ### 3 Stage and commit
-    run in terminal
+run in terminal
     
-    You need to all your files to the repository.
+You need to all your files to the repository.
 
    ```
    git add README.md
@@ -63,7 +63,7 @@ run in terminal
    git commit -m "Initial commit: added README.md"
    ```
    
-   You can add all files at once using. Make sure you provide a gitignore or that you not add artifact files.
+You can add all files at once using. Make sure you provide a gitignore or that you not add artifact files.
 
    ```
    git add *
