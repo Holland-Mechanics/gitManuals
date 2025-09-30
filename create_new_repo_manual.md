@@ -38,6 +38,7 @@ And lastly push using  `git push -u origin main`. Form this moment forward you c
 
 ### 1 Create folder and initialize repo
 run in terminal
+
    ```
    mkdir HelloWorld
    cd HelloWorld
@@ -46,6 +47,7 @@ run in terminal
 
 ### 2 Optional: Create README.md with content
     run in terminal
+    
    ```
    touch README.md
    ```
@@ -61,12 +63,12 @@ run in terminal
    git commit -m "Initial commit: added README.md"
    ```
    
-    You can add all files at once using. Make sure you provide a gitignore or that you not add artifact files.
+   You can add all files at once using. Make sure you provide a gitignore or that you not add artifact files.
 
-     ```
-     git add *
-     git commit -am "added all files"
-     ```
+   ```
+   git add *
+   git commit -am "added all files"
+   ```
 
 ### 4 Create repository on GitHub and push
 
@@ -77,7 +79,7 @@ run in terminal
     gh repo create holland-mechanics/HelloWorld --private --source . --remote origin --push
     ```
 
-    Output should look like:
+   Output should look like:
     
     ```
     $ gh repo create holland-mechanics/HelloWorld --private --source . --remote origin --push
@@ -103,7 +105,7 @@ run in terminal
 
 ### 5 Verify if your repo is visible on github.com
 
-   - Organization: https://github.com/holland-mechanics/HelloWorld
+   - Organization: `https://github.com/holland-mechanics/HelloWorld`
 
 ## Steps for the python script.
 If the script is added to your system environment variables and python3 is installed. You can open a terminal and run the script from anywhere.
