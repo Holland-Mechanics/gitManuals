@@ -25,53 +25,53 @@ As the webpage will also show, you need to run some command lines in a terminal 
 
 First enter 
 
-   ```
-   git init
-   ``` 
+```
+git init
+``` 
    
 to make a local repo and add your files using 
 
-   ```
-   git add your_file.ext
-   ``` 
+```
+git add your_file.ext
+``` 
    
 or add each and every file in the folder and subfolder at once.
 
-   ```
-   git add *
-   ``` 
+```
+git add *
+``` 
 
 Commit all your files using 
 
-   ```
-   git commit -a
-   ``` 
+```
+git commit -a
+``` 
    
 to the repository.
 
 Make a main or master branch: 
 
-   ```
-   git branch -M main
-   ```
+```
+git branch -M main
+```
 
 Add a remote with: 
 
-   ```
-   git remote add origin https://github.com/Holland-Mechanics/testABC.git
-   ```
+```
+git remote add origin https://github.com/Holland-Mechanics/testABC.git
+```
 
 And lastly push using  
 
-   ```
-   git push -u origin main
-   ``` 
+```
+git push -u origin main
+``` 
 
 Form this moment forward you can push by simply running 
 
-   ```
-   git push
-   ```
+```
+git push
+```
 
 ![Image 3](src/gh3.png)
 
@@ -80,74 +80,74 @@ Form this moment forward you can push by simply running
 ### 1 Create folder and initialize repo
 run in terminal
 
-   ```
-   mkdir HelloWorld
-   ```
-   ```
-   cd HelloWorld
-   ```
-   ```
-   git init
-   ```
+```
+mkdir HelloWorld
+```
+```
+cd HelloWorld
+```
+```
+git init
+```
 
 ### 2 Optional: Create README.md with content
 run in terminal
     
-   ```
-   touch README.md
-   ```
+```
+touch README.md
+```
 
 ### 3 Stage and commit
 run in terminal
     
 You need to all your files to the repository.
-
-   ```
-   git add README.md
-   ```
-   ```
-   git add file.cpp
-   ```
-   ```
-   git commit -m "Initial commit: added README.md"
-   ```
+```
+git add README.md
+```      
+```
+git add file.cpp
+```
+```
+git commit -m "Initial commit: added README.md"
+```
+   
    
 You can add all files at once using. Make sure you provide a gitignore or that you not add artifact files.
 
-   ```
-   git add *
-   ```
-   ```
-   git commit -am "added all files"
-   ```
+```
+git add *
+```
+```
+git commit -am "added all files"
+```
 
 ### 4 Create repository on GitHub and push
 
    Organization repository (holland-mechanics):
    run in terminal
 
-    ```
-    gh repo create holland-mechanics/HelloWorld --private --source . --remote origin --push
-    ```
+ ```
+ gh repo create holland-mechanics/HelloWorld --private --source . --remote origin --push
+ ```
 
    Output should look like:
-    
-    ```
-    $ gh repo create holland-mechanics/HelloWorld --private --source . --remote origin --push
-    ✓ Created repository Holland-Mechanics/HelloWorld on github.com
-    https://github.com/Holland-Mechanics/HelloWorld
-    ✓ Added remote https://github.com/Holland-Mechanics/HelloWorld.git
-    Enumerating objects: 3, done.
-    Counting objects: 100% (3/3), done.
-    Writing objects: 100% (3/3), 230 bytes | 115.00 KiB/s, done.
-    Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
-    To https://github.com/Holland-Mechanics/HelloWorld.git
-    * [new branch]      HEAD -> master
-    branch 'master' set up to track 'origin/master'.
-    ✓ Pushed commits to https://github.com/Holland-Mechanics/HelloWorld.git
-    ```
+ 
+ ```
+ $ gh repo create holland-mechanics/HelloWorld --private --source . --remote origin --push
+ ✓ Created repository Holland-Mechanics/HelloWorld on github.com
+ https://github.com/Holland-Mechanics/HelloWorld
+ ✓ Added remote https://github.com/Holland-Mechanics/HelloWorld.git
+ Enumerating objects: 3, done.
+ Counting objects: 100% (3/3), done.
+ Writing objects: 100% (3/3), 230 bytes | 115.00 KiB/s, done.
+ Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+ To https://github.com/Holland-Mechanics/HelloWorld.git
+ * [new branch]      HEAD -> master
+ branch 'master' set up to track 'origin/master'.
+ ✓ Pushed commits to https://github.com/Holland-Mechanics/HelloWorld.git
+ ```
 
-   Notes:
+Notes:
    - `--private`   : create as private repo (use --public if desired)
    - `--source` .  : use current directory as source
    - `--remote origin` : set remote to "origin"
