@@ -25,37 +25,53 @@ As the webpage will also show, you need to run some command lines in a terminal 
 
 First enter 
 
-   ```git init``` 
+   ```
+   git init
+   ``` 
    
 to make a local repo and add your files using 
 
-   ```git add your_file.ext``` 
+   ```
+   git add your_file.ext
+   ``` 
    
 or add each and every file in the folder and subfolder at once.
 
-   ```git add *``` 
+   ```
+   git add *
+   ``` 
 
 Commit all your files using 
 
-   ```git commit -a``` 
+   ```
+   git commit -a
+   ``` 
    
 to the repository.
 
 Make a main or master branch: 
 
-   ```git branch -M main```
+   ```
+   git branch -M main
+   ```
 
 Add a remote with: 
 
-   ```git remote add origin https://github.com/Holland-Mechanics/testABC.git```
+   ```
+   git remote add origin https://github.com/Holland-Mechanics/testABC.git
+   ```
 
 And lastly push using  
 
-```git push -u origin main``` 
+   ```
+   git push -u origin main
+   ``` 
 
 Form this moment forward you can push by simply running 
 
-```git push```
+   ```
+   git push
+   ```
 
 ![Image 3](src/gh3.png)
 
@@ -66,7 +82,11 @@ run in terminal
 
    ```
    mkdir HelloWorld
+   ```
+   ```
    cd HelloWorld
+   ```
+   ```
    git init
    ```
 
@@ -84,7 +104,11 @@ You need to all your files to the repository.
 
    ```
    git add README.md
+   ```
+   ```
    git add file.cpp
+   ```
+   ```
    git commit -m "Initial commit: added README.md"
    ```
    
@@ -92,6 +116,8 @@ You can add all files at once using. Make sure you provide a gitignore or that y
 
    ```
    git add *
+   ```
+   ```
    git commit -am "added all files"
    ```
 
