@@ -12,7 +12,39 @@ This repo contains:
 ## 1) Create User Credentials
 The very first thing you need to do, is to surf to [www.github.com](github.com) and register an acount, using your Holland Mechanics E-mail acount. For acount name use: `<front_name> - <last_name>`, like `jan-smit`. After that get in touch with Bas or Nelson, they will invite you to the holland mechanics organisation and will grant you certain rights.
 
+---
 
+### 1.1) Additional required GitHub setup (2FA + PAT)
+
+Before Git can access **private organisation repositories**, two things MUST be completed:
+
+#### **1.1.1 — Enable Two-Factor Authentication**
+GitHub requires 2FA for all Holland Mechanics organisation members.
+
+Steps:
+1. Go to **GitHub → Settings → Password and authentication**
+2. Enable **Two-Factor Authentication**
+3. Install an authenticator app (recommended)
+4. Store your backup codes safely
+
+### **1.1.2 — Create a Personal Access Token (PAT)**  
+GitHub no longer allows password login for Git operations.  
+A **PAT replaces your password** when using `git.exe`.
+
+Create one:
+
+1. Go to: https://github.com/settings/tokens?type=beta  
+2. Click **Generate new token**
+3. Choose **Fine-grained personal access token**
+4. Select:
+   - **Resource owner:** your user  
+   - **Repository access:** *All repositories* (unless restricted)
+5. Grant **Contents: Read and Write**
+6. Click **Generate**
+7. Copy the token and keep it safe  
+   (You will need it **only once**, Git will store it securely.)
+
+---
 
 ## 2) Install Git tools (Git Bash + GitHub CLI)
 This manual explains about tools that you need to have in order to work with git.
@@ -25,6 +57,66 @@ Pyhton scripts can be used to automize some tasks, such as creating a git repo. 
 
 - Manual: [install_gitbash.md](./install_gitbash.md)
 
+### **2.1 — Configure your identity in git.exe**
+Run these commands in **Git Bash**:
+
+```
+git config --global user.name "your_user_name"
+git config --global user.email "your_email@hollandmechanics.com"
+```
+
+### **2.2 — Ensure the Git Credential Manager is active**
+On Windows this is normally already enabled, but enforce it with:
+
+```
+git config --global credential.helper manager
+```
+
+### **2.3 — Store your GitHub username**
+This ensures Git never falls back to the wrong account:
+
+```
+git config --global credential.username "<github-username>"
+
+```
+
+Example:
+
+```
+git config --global credential.username "jan-smit"
+
+```
+
+### **2.4 — Store your PAT in the Git credential helper (without gh.exe)**
+Replace `<github-username>` and `<PAT>`:
+
+```
+printf "protocol=https
+host=github.com
+username=<github-username>
+password=<PAT>
+
+" | git credential approve
+
+```
+
+Git will now authenticate against private organisation repos with HTTPS without prompting again.
+
+To verify:
+
+```
+
+git credential fill <<EOF
+protocol=https
+host=github.com
+
+EOF
+
+```
+
+You should see your GitHub username and the PAT.
+
+---
 
 ## 3) Create a **new** repository on GitHub (from local folder)
 For starting a fresh project and pushing it to the organisation. Can be done via a terminal or webbrowser
@@ -72,5 +164,4 @@ Uses **HTTPS** to avoid SSH key issues and skips PR refs.
 We release software using the github way of doing this. This can be done via the browsers and some manual actions or you can use `release_version_script.py` to help you in this.
 
 - Manual: [release_version_manual.md](./migrate_repo_manual.md)  
-- Script: [release_version_script.py](./migrate_repo_script.py)  
----
+- Script: [release_version_script.py](./migrate_repo_script.py)
